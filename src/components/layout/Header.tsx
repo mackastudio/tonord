@@ -1,13 +1,14 @@
 import Logo from "@/components/ui/Logo";
+import Container from "@/components/ui/Container";
 import Nav from "@/components/layout/Nav";
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 bg-bg border-b border-border">
-      <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+    <header className="sticky top-0 z-50 border-b border-graphite-line bg-graphite/95 backdrop-blur">
+      <Container className="flex h-16 items-center justify-between gap-6 lg:h-20">
         <Logo />
         <Nav />
-      </div>
+      </Container>
     </header>
   );
 }

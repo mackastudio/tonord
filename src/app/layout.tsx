@@ -1,24 +1,28 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Inter } from "next/font/google";
+import { Inter, Inter_Tight } from "next/font/google";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import "./globals.css";
 
-const cormorant = Cormorant_Garamond({
-  variable: "--font-cormorant",
+const display = Inter_Tight({
+  variable: "--font-display-family",
   subsets: ["latin"],
-  weight: ["300", "400", "600"],
+  weight: ["400", "500", "600"],
 });
 
-const inter = Inter({
-  variable: "--font-inter",
+const sans = Inter({
+  variable: "--font-sans-family",
   subsets: ["latin"],
-  weight: ["400", "500"],
+  weight: ["400", "500", "600"],
 });
 
 export const metadata: Metadata = {
-  title: "ToNord",
-  description: "ToNord är en förening för konstnärer i norra regionen.",
+  title: {
+    default: "Talga — Battery anode & advanced materials",
+    template: "%s — Talga",
+  },
+  description:
+    "Talga is a vertically integrated battery anode and advanced materials company, from natural graphite in northern Sweden to green anode for the world's most sustainable batteries.",
 };
 
 export default function RootLayout({
@@ -28,12 +32,20 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="sv"
-      className={`${cormorant.variable} ${inter.variable} h-full antialiased`}
+      lang="en"
+      className={`${display.variable} ${sans.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-bg text-ink">
+      <body className="min-h-full flex flex-col bg-paper text-ink">
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60] focus:bg-paper focus:px-4 focus:py-2"
+        >
+          Skip to content
+        </a>
         <Header />
-        <main className="flex-1">{children}</main>
+        <main id="main" className="flex-1">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>
