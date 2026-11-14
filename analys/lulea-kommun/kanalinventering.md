@@ -70,6 +70,11 @@ Facebook och LinkedIn blockerar automatiska anrop. Instagram visar inte antal in
 2. **Manuell räkning** i inloggad webbläsare: inlägg under nov 2025 – okt 2026 per konto, med fokus på de cirka 10 största.
 3. **Ett betalt verktyg för social analys** (t.ex. Fanpage Karma, Brandwatch, Emplifi).
 
+## 5. Beslut om metod (14 nov 2026)
+- Inläggen på sociala medier räknas manuellt. Räknearket finns här: https://claude.ai/artifact/CZncB9KfDRs9mdDh7Vf61p
+- Om det inte går att räkna hela perioden nov 2025 – okt 2026 räknas senaste kvartalet (1 aug – 31 okt 2026), och arket räknar upp till helår: inlägg ÷ antal dagar × 365.
+- Kommunala bolag (Luleå Energi, Lulebo, Luleå hamn, Lumire, LLT) ingår inte.
+
 ## Datafiler
 - `pressmeddelanden_2025-11_2026-10.txt`: alla 141 pressmeddelanden (datum och rubrik i URL-form)
 - `vartlulea_artiklar_2025-11_2026-10.csv`: alla 373 artiklar med datum, sektion och rubrik
